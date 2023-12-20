@@ -7,8 +7,13 @@
         <version>2023</version>
     </parent>
     <artifactId>order</artifactId>
-    <name>Archetype - order</name>
-    <url>http://maven.apache.org</url>
-
+    <name>order</name>
+<dependencies>
+    <dependency>
+        <groupId>org.pk.lx</groupId>
+        <artifactId>pk-common</artifactId>
+        <version>2023</version>
+    </dependency>
+</dependencies>
 
 </project>

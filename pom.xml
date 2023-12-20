@@ -16,7 +16,6 @@
         <relativePath/>
     </parent>
     <properties>
-        <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
         <pk.version>2023</pk.version>
     </properties>
 

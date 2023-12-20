@@ -7,6 +7,12 @@
         <version>2023</version>
     </parent>
     <artifactId>patient</artifactId>
-    <name>Archetype - patient</name>
-    <url>http://maven.apache.org</url>
+    <name> patient</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.pk.lx</groupId>
+            <artifactId>pk-common</artifactId>
+            <version>2023</version>
+        </dependency>
+    </dependencies>
 </project>

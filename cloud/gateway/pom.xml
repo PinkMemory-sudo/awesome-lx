@@ -7,6 +7,24 @@
         <version>2023</version>
     </parent>
     <artifactId>gateway</artifactId>
-    <name>Archetype - gateway</name>
-    <url>http://maven.apache.org</url>
+    <name>gateway</name>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.pk.lx</groupId>
+            <artifactId>pk-common</artifactId>
+            <version>2023</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <version>${spring-cloud-alibaba.version}</version>
+        </dependency>
+    </dependencies>
 </project>

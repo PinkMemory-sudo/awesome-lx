@@ -7,6 +7,6 @@
         <version>2023</version>
     </parent>
     <artifactId>jbase</artifactId>
-    <name>Archetype - jbase</name>
+    <name>jbase</name>
     <url>http://maven.apache.org</url>
 </project>
