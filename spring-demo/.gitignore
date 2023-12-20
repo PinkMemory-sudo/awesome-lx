@@ -31,13 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### Maven ###
-/mvnw
-/mvnw.cmd
-/.mvn/
-
-### Log ###
-*.log
-*.log.gz
-*.log.zip

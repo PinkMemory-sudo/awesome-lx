@@ -1,0 +1,16 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: patient
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.1.138:85
+        namespace: b0919edd-a86a-408e-b3e1-c916b904d739
+        file-extension: yml
+        group: pk
+        shared-configs:
+          - data-id: common.yml
+            group: pk
+            refresh: true
