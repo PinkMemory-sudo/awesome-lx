@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pk.patient.dao.mapper.BasicPatInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.pk.patient.dao.domain.BasicPatInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="patCode" column="pat_code" jdbcType="VARCHAR"/>
+            <result property="patName" column="pat_name" jdbcType="VARCHAR"/>
+            <result property="hospitalId" column="hospital_id" jdbcType="INTEGER"/>
+            <result property="cardNum" column="card_num" jdbcType="VARCHAR"/>
+            <result property="cardType" column="card_type" jdbcType="TINYINT"/>
+            <result property="patBirth" column="pat_birth" jdbcType="DATE"/>
+            <result property="idCard" column="id_card" jdbcType="VARCHAR"/>
+            <result property="patAge" column="pat_age" jdbcType="INTEGER"/>
+            <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
+            <result property="occupation" column="occupation" jdbcType="VARCHAR"/>
+            <result property="patGender" column="pat_gender" jdbcType="INTEGER"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="patContactName" column="pat_contact_name" jdbcType="VARCHAR"/>
+            <result property="patContactPhone" column="pat_contact_phone" jdbcType="INTEGER"/>
+            <result property="state" column="state" jdbcType="TINYINT"/>
+            <result property="creator" column="creator" jdbcType="VARCHAR"/>
+            <result property="editor" column="editor" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,pat_code,pat_name,
+        hospital_id,card_num,card_type,
+        pat_birth,id_card,pat_age,
+        phone_number,occupation,pat_gender,
+        address,pat_contact_name,pat_contact_phone,
+        state,creator,editor,
+        update_time,create_time,is_delete
+    </sql>
+</mapper>

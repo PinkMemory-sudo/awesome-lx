@@ -1,6 +1,11 @@
 server:
   port: 8001
 spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.9:3306/test_cgl?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL
+    username: root
+    password: Pass@word!1
   application:
     name: patient
   cloud:
@@ -14,3 +19,7 @@ spring:
           - data-id: common.yml
             group: pk
             refresh: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
