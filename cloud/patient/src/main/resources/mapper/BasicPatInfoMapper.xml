@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.pk.patient.dao.mapper.BasicPatInfoMapper">
 
-    <resultMap id="BaseResultMap" type="com.pk.patient.dao.domain.BasicPatInfo">
+    <resultMap id="BaseResultMap" type="com.pk.patient.domain.entity.BasicPatInfo">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="patCode" column="pat_code" jdbcType="VARCHAR"/>
             <result property="patName" column="pat_name" jdbcType="VARCHAR"/>

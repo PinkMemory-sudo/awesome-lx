@@ -1,7 +1,7 @@
 package com.pk.patient.dao.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.pk.patient.dao.domain.BasicPatInfo;
+import com.pk.patient.domain.entity.BasicPatInfo;
 import com.pk.patient.dao.mapper.BasicPatInfoMapper;
 import com.pk.patient.dao.service.BasicPatInfoService;
 import org.springframework.stereotype.Service;

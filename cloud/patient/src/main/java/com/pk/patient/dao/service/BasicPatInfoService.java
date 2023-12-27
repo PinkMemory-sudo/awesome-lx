@@ -1,6 +1,6 @@
 package com.pk.patient.dao.service;
 
-import com.pk.patient.dao.domain.BasicPatInfo;
+import com.pk.patient.domain.entity.BasicPatInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

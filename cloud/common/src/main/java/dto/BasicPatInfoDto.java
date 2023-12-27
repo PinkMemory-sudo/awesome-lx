@@ -128,7 +128,7 @@ public class BasicPatInfoDto implements Serializable {
     /**
      * 是否删除。0-删除，1-正常。
      */
-    private Integer isDelete;
+    private Integer delete;
 
     private static final long serialVersionUID = 1L;
 

@@ -1,6 +1,6 @@
 package com.pk.patient.dao.mapper;
 
-import com.pk.patient.dao.domain.BasicPatInfo;
+import com.pk.patient.domain.entity.BasicPatInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

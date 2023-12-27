@@ -1,4 +1,4 @@
-package com.pk.patient.dao.domain;
+package com.pk.patient.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -37,7 +37,6 @@ public class BasicPatInfo implements Serializable {
     /**
      * 医院标识
      */
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "#_###")
     private Integer hospitalId;
 
     /**
