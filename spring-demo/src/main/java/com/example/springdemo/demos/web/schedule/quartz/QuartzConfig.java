@@ -9,6 +9,11 @@ import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
+
 import static org.quartz.CronScheduleBuilder.cronSchedule;
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.repeatSecondlyForTotalCount;
@@ -28,6 +33,8 @@ public class QuartzConfig {
     @Bean
     public Trigger myTrigger() {
         return newTrigger()
+                .startAt(Date.from(Instant.now().plusSeconds(10)))
+                .endAt(Date.from(LocalDateTime.now().plusHours(10).atZone(ZoneId.systemDefault()).toInstant()))
                 .forJob(myJobDetail())
                 .withIdentity("myTrigger")
                 .withSchedule(cronSchedule("0/10 * * * * ?")) // 每隔5秒执行一次
@@ -62,7 +69,7 @@ public class QuartzConfig {
     }
 
     @Bean
-    public Scheduler scheduler(JobDetail myJobDetail, Trigger myTrigger,Trigger simpleTrigger) throws SchedulerException {
+    public Scheduler scheduler(JobDetail myJobDetail, Trigger myTrigger, Trigger simpleTrigger) throws SchedulerException {
         Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
         scheduler.scheduleJob(myJobDetail, myTrigger);
         scheduler.scheduleJob(simpleTrigger);

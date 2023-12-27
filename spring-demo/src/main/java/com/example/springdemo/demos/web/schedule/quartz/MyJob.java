@@ -5,6 +5,14 @@ import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
+/**
+ * 参数传递
+ * 配置文件
+ * JobListener
+ * TriggerListener
+ * SchedulerListener
+ *
+ */
 @Slf4j
 public class MyJob implements Job {
 
