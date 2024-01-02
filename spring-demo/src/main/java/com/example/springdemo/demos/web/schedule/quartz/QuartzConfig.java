@@ -2,10 +2,7 @@ package com.example.springdemo.demos.web.schedule.quartz;
 
 
 import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
 import org.quartz.Trigger;
-import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -68,12 +65,12 @@ public class QuartzConfig {
                 .build();
     }
 
-    @Bean
-    public Scheduler scheduler(JobDetail myJobDetail, Trigger myTrigger, Trigger simpleTrigger) throws SchedulerException {
-        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
-        scheduler.scheduleJob(myJobDetail, myTrigger);
-        scheduler.scheduleJob(simpleTrigger);
-        scheduler.start();
-        return scheduler;
-    }
+//    @Bean
+//    public Scheduler scheduler(JobDetail myJobDetail, Trigger myTrigger, Trigger simpleTrigger) throws SchedulerException {
+//        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+//        scheduler.scheduleJob(myJobDetail, myTrigger);
+//        scheduler.scheduleJob(simpleTrigger);
+//        scheduler.start();
+//        return scheduler;
+//    }
 }

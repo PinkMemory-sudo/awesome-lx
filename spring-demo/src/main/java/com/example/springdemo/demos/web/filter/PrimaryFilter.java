@@ -1,12 +1,11 @@
 package com.example.springdemo.demos.web.filter;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import java.io.IOException;
 
-@Component
+//@Component
 @Slf4j
 public class PrimaryFilter implements Filter {
 
