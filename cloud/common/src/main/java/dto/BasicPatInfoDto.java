@@ -131,5 +131,6 @@ public class BasicPatInfoDto implements Serializable {
     private Integer delete;
 
     private static final long serialVersionUID = 1L;
+    
 
 }
