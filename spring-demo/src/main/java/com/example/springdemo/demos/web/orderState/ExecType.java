@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor
+@Getter
 public enum ExecType {
 
     /**
@@ -35,26 +36,13 @@ public enum ExecType {
     /**
      * 执行操作
      */
-    SUSPEND_OPERATION("暂停", SuspendState.getInstance())
-    ;
+    SUSPEND_OPERATION("暂停", SuspendState.getInstance());
 
-    @Getter
     @JsonValue
     private final String code;
 
     /**
      * 动作绑定的状态
      */
-    @Getter
     private final OrderExecState orderExecState;
-
-    public static ExecType getExecTypeByCode(String code) {
-        for (ExecType value : values()) {
-            if (value.code.equals(code)) {
-                return value;
-            }
-        }
-        return null;
-    }
-
 }
