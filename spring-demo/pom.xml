@@ -75,7 +75,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.example.springdemo.SpringDemoApplication</mainClass>
-                    <skip>true</skip>
+<!--                    <skip>true</skip>-->
                 </configuration>
                 <executions>
                     <execution>

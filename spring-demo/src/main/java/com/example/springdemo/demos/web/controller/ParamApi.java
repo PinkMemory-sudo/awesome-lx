@@ -1,13 +1,15 @@
 package com.example.springdemo.demos.web.controller;
 
 import com.example.springdemo.demos.web.model.param.OrderExecRequest;
+import com.example.springdemo.demos.web.model.param.UserListQuery;
+import com.example.springdemo.demos.web.model.param.dto.R;
 import com.example.springdemo.demos.web.orderState.OrderExecState;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/param")
@@ -26,6 +28,16 @@ public class ParamApi {
     @PostMapping("getRequestBody")
     public String getRequestBody(@RequestBody String name) {
         return name;
+    }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
+
+    @PostMapping("/valid")
+    public R<Void> valid(@RequestBody @Valid List<UserListQuery> userListQuery) {
+        return R.success(null);
     }
 
 }
