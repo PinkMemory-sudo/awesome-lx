@@ -4,7 +4,6 @@ package com.example.springdemo.demos.web.schedule.quartz;
 import org.quartz.JobDetail;
 import org.quartz.Trigger;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -16,7 +15,7 @@ import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.repeatSecondlyForTotalCount;
 import static org.quartz.TriggerBuilder.newTrigger;
 
-@Configuration
+//@Configuration
 public class QuartzConfig {
 
     @Bean
