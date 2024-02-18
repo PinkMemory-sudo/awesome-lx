@@ -1,0 +1,131 @@
+<Result>
+    <StatusCode>1</StatusCode>
+    <ErrorMessage/>
+    <Data>
+        <Items>
+            <Item>
+                <Fields>
+                    <Field name="CardNo" value="135401014456880"/>
+                    <Field name="AdmitNo" value="96007266"/>
+                    <Field name="Part_NAME" value="测试218病区"/>
+                    <Field name="PAT_SEX" value="男"/>
+                    <Field
+                            name="CureNo" value="21606573"/>
+                    <Field name="BirthDay" value="19970512"/>
+                    <Field
+                            name="Status" value="3"/>
+                    <Field name="WardCode" value="1189"/>
+                    <Field name=
+                                   "WardName" value=""/>
+                    <Field name="DeptCode" value="12883"/>
+                    <Field name="DeptName"
+                           value="西院运动医学科"/>
+                    <Field name="HomePhone" value="13333333333"/>
+                    <Field name=
+                                   "HomeAddress" value="1"/>
+                    <Field name="Age" value="26"/>
+                    <Field name="ID_NO"
+                           value="310228199705124016"/>
+                    <Field name="HospitalCode" value=""/>
+                    <Field name="AdmitDate"
+                           value="2022/8/2 15:33:22"/>
+                    <Field name="AdmitDiag" value=""/>
+                    <Field name="BedNo"
+                           value="101"/>
+                </Fields>
+            </Item>
+            <Item>
+                <Fields>
+                    <Field name="CardNo" value="135401014456880"/>
+                    <Field name="AdmitNo" value="96007266"/>
+                    <Field name="Part_NAME" value="测试218病区"/>
+                    <Field name="PAT_SEX" value="男"/>
+                    <Field
+                            name="CureNo" value="21507901"/>
+                    <Field name="BirthDay" value="19970512"/>
+                    <Field
+                            name="Status" value="3"/>
+                    <Field name="WardCode" value="1134"/>
+                    <Field name=
+                                   "WardName" value="测试病区"/>
+                    <Field name="DeptCode" value="12728"/>
+                    <Field name=
+                                   "DeptName" value="北院测试"/>
+                    <Field name="HomePhone" value="13333333333"/>
+                    <Field name=
+                                   "HomeAddress" value="1"/>
+                    <Field name="Age" value="26"/>
+                    <Field name="ID_NO"
+                           value="310228199705124016"/>
+                    <Field name="HospitalCode" value="8"/>
+                    <Field name="AdmitDate"
+                           value="2022/7/13 15:20:01"/>
+                    <Field name="AdmitDiag" value=""/>
+                    <Field name="BedNo"
+                           value="100"/>
+                </Fields>
+            </Item>
+            <Item>
+                <Fields>
+                    <Field name="CardNo" value="135401014456880"/>
+                    <Field name="AdmitNo" value="96007266"/>
+                    <Field name="Part_NAME" value="测试218病区"/>
+                    <Field name="PAT_SEX" value="男"/>
+                    <Field
+                            name="CureNo" value="21502080"/>
+                    <Field name="BirthDay" value="19970512"/>
+                    <Field
+                            name="Status" value="3"/>
+                    <Field name="WardCode" value="1162"/>
+                    <Field name=
+                                   "WardName" value="218病区"/>
+                    <Field name="DeptCode" value="12619"/>
+                    <Field name="DeptName"
+                           value="北院耳鼻咽喉科"/>
+                    <Field name="HomePhone" value="13333333333"/>
+                    <Field name=
+                                   "HomeAddress" value="1"/>
+                    <Field name="Age" value="26"/>
+                    <Field name="ID_NO"
+                           value="310228199705124016"/>
+                    <Field name="HospitalCode" value="8"/>
+                    <Field name="AdmitDate"
+                           value="2022/7/12 13:44:12"/>
+                    <Field name="AdmitDiag" value=""/>
+                    <Field name="BedNo"
+                           value="1"/>
+                </Fields>
+            </Item>
+            <Item>
+                <Fields>
+                    <Field name="CardNo" value="135401014456880"/>
+                    <Field name="AdmitNo" value="96007266"/>
+                    <Field name="Part_NAME" value="测试218病区"/>
+                    <Field name="PAT_SEX" value="男"/>
+                    <Field
+                            name="CureNo" value="21498109"/>
+                    <Field name="BirthDay" value="19970512"/>
+                    <Field
+                            name="Status" value="3"/>
+                    <Field name="WardCode" value="1176"/>
+                    <Field name=
+                                   "WardName" value="218病区"/>
+                    <Field name="DeptCode" value="12670"/>
+                    <Field name="DeptName"
+                           value="北院心内科"/>
+                    <Field name="HomePhone" value="13333333333"/>
+                    <Field name="HomeAddress"
+                           value="1"/>
+                    <Field name="Age" value="26"/>
+                    <Field name="ID_NO" value="310228199705124016"
+                    />
+                    <Field name="HospitalCode" value="8"/>
+                    <Field name="AdmitDate" value="2022/7/11 16:49:28"
+                    />
+                    <Field name="AdmitDiag" value=""/>
+                    <Field name="BedNo" value="5"/>
+                </Fields>
+            </Item>
+        </Items>
+    </Data>
+</Result>

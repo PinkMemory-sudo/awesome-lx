@@ -2,9 +2,11 @@ package com.example.springdemo.demos.web.model.param.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class R<T> {
 
     private String code;
@@ -14,11 +16,12 @@ public class R<T> {
     private T data;
 
 
-    public static <T> R<T> error(String msg) {
-        return new R<>("999", msg, null);
-    }
+//    public static  R error(String msg) {
+//        R<Object> objectR = new R<>();
+//        return objectR;
+//    }
 
-    public static <T> R<T> success(T t) {
-        return new R<>("000", "success", t);
-    }
+//    public static <T> R<T> success(T t) {
+//        return new R<>("000", "success", t);
+//    }
 }

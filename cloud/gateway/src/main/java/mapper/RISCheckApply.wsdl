@@ -1,0 +1,1486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:types>
+        <s:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+                  targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+                  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/">
+            <s:element name="GetCheckApplyFee">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCheckApplyFeeResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetCheckApplyFeeResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetOutPatientCheckApplyFee">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetOutPatientCheckApplyFeeResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetOutPatientCheckApplyFeeResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCheckApplyTT">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCheckApplyTTResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetCheckApplyTTResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateOrderStatus">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateOrderStatusResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="UpdateOrderStatusResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="PostBackReport">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="PostBackReportResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="PostBackReportResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="getPatientInfo">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="getPatientInfoResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="getPatientInfoResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetWardCodeByRis">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="WardCode" type="xs:string"/>
+                        <s:element minOccurs="0" name="AdmitNo" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetWardCodeByRisResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetWardCodeByRisResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCheckApplyXiangHong">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCheckApplyXiangHongResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetCheckApplyXiangHongResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetIPRisCheckVerify">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetIPRisCheckVerifyResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetIPRisCheckVerifyResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCureNoByXBS">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCureNoByXBSResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetCureNoByXBSResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetXHApplyIdByInfo">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="callType" type="xs:string"/>
+                        <s:element minOccurs="0" name="xmlMessage" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetXHApplyIdByInfoResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetXHApplyIdByInfoResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetResourcesByInfo">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetResourcesByInfoResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetResourcesByInfoResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetfirstaidCenter">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetfirstaidCenterResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetfirstaidCenterResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCDC">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCDCResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetCDCResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetBloodCDC">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetBloodCDCResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="GetBloodCDCResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WeChatPay">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WeChatPayResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="WeChatPayResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UnionPay">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UnionPayResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="UnionPayResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="Commercialinsurance">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="CommercialinsuranceResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="CommercialinsuranceResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="externalData">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="externalDataResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="externalDataResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ExternalDispensing">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="XML" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ExternalDispensingResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="ExternalDispensingResult" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetOutPatientCheckApplyFeeFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetBloodCDCFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="CommercialinsuranceFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="PostBackReportFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetWardCodeByRisFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetfirstaidCenterFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UnionPayFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="getPatientInfoFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetXHApplyIdByInfoFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCheckApplyTTFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCheckApplyXiangHongFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WeChatPayFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCDCFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetResourcesByInfoFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateOrderStatusFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="externalDataFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCheckApplyFeeFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCureNoByXBSFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetIPRisCheckVerifyFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ExternalDispensingFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="f5test">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="f5testResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="f5testFault">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="payload" type="xs:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="externalDataRequest">
+        <wsdl:part name="parameters" element="tns:externalData">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="f5testFault">
+        <wsdl:part name="parameters" element="tns:f5testFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getPatientInfoRequest">
+        <wsdl:part name="parameters" element="tns:getPatientInfo">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CommercialinsuranceRequest">
+        <wsdl:part name="parameters" element="tns:Commercialinsurance">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyXiangHongRequest">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyXiangHong">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateOrderStatusRequest">
+        <wsdl:part name="parameters" element="tns:UpdateOrderStatus">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyFeeFault">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyFeeFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getPatientInfoFault">
+        <wsdl:part name="parameters" element="tns:getPatientInfoFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetIPRisCheckVerifyResponse">
+        <wsdl:part name="parameters" element="tns:GetIPRisCheckVerifyResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ExternalDispensingRequest">
+        <wsdl:part name="parameters" element="tns:ExternalDispensing">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetWardCodeByRisResponse">
+        <wsdl:part name="parameters" element="tns:GetWardCodeByRisResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetXHApplyIdByInfoResponse">
+        <wsdl:part name="parameters" element="tns:GetXHApplyIdByInfoResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getPatientInfoResponse">
+        <wsdl:part name="parameters" element="tns:getPatientInfoResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CommercialinsuranceResponse">
+        <wsdl:part name="parameters" element="tns:CommercialinsuranceResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="WeChatPayFault">
+        <wsdl:part name="parameters" element="tns:WeChatPayFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetWardCodeByRisRequest">
+        <wsdl:part name="parameters" element="tns:GetWardCodeByRis">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetXHApplyIdByInfoFault">
+        <wsdl:part name="parameters" element="tns:GetXHApplyIdByInfoFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCDCRequest">
+        <wsdl:part name="parameters" element="tns:GetCDC">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="externalDataFault">
+        <wsdl:part name="parameters" element="tns:externalDataFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="PostBackReportRequest">
+        <wsdl:part name="parameters" element="tns:PostBackReport">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateOrderStatusResponse">
+        <wsdl:part name="parameters" element="tns:UpdateOrderStatusResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetWardCodeByRisFault">
+        <wsdl:part name="parameters" element="tns:GetWardCodeByRisFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetfirstaidCenterRequest">
+        <wsdl:part name="parameters" element="tns:GetfirstaidCenter">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="PostBackReportFault">
+        <wsdl:part name="parameters" element="tns:PostBackReportFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetResourcesByInfoFault">
+        <wsdl:part name="parameters" element="tns:GetResourcesByInfoFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="PostBackReportResponse">
+        <wsdl:part name="parameters" element="tns:PostBackReportResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyXiangHongResponse">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyXiangHongResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetIPRisCheckVerifyFault">
+        <wsdl:part name="parameters" element="tns:GetIPRisCheckVerifyFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCureNoByXBSFault">
+        <wsdl:part name="parameters" element="tns:GetCureNoByXBSFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyTTResponse">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyTTResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCDCFault">
+        <wsdl:part name="parameters" element="tns:GetCDCFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UnionPayFault">
+        <wsdl:part name="parameters" element="tns:UnionPayFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetBloodCDCRequest">
+        <wsdl:part name="parameters" element="tns:GetBloodCDC">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UnionPayResponse">
+        <wsdl:part name="parameters" element="tns:UnionPayResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UnionPayRequest">
+        <wsdl:part name="parameters" element="tns:UnionPay">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetBloodCDCResponse">
+        <wsdl:part name="parameters" element="tns:GetBloodCDCResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CommercialinsuranceFault">
+        <wsdl:part name="parameters" element="tns:CommercialinsuranceFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetOutPatientCheckApplyFeeFault">
+        <wsdl:part name="parameters" element="tns:GetOutPatientCheckApplyFeeFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCureNoByXBSResponse">
+        <wsdl:part name="parameters" element="tns:GetCureNoByXBSResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetfirstaidCenterFault">
+        <wsdl:part name="parameters" element="tns:GetfirstaidCenterFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetResourcesByInfoRequest">
+        <wsdl:part name="parameters" element="tns:GetResourcesByInfo">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetResourcesByInfoResponse">
+        <wsdl:part name="parameters" element="tns:GetResourcesByInfoResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="f5testResponse">
+        <wsdl:part name="parameters" element="tns:f5testResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetBloodCDCFault">
+        <wsdl:part name="parameters" element="tns:GetBloodCDCFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="f5testRequest">
+        <wsdl:part name="parameters" element="tns:f5test">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyFeeResponse">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyFeeResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyFeeRequest">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyFee">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetfirstaidCenterResponse">
+        <wsdl:part name="parameters" element="tns:GetfirstaidCenterResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetXHApplyIdByInfoRequest">
+        <wsdl:part name="parameters" element="tns:GetXHApplyIdByInfo">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="externalDataResponse">
+        <wsdl:part name="parameters" element="tns:externalDataResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetOutPatientCheckApplyFeeResponse">
+        <wsdl:part name="parameters" element="tns:GetOutPatientCheckApplyFeeResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetIPRisCheckVerifyRequest">
+        <wsdl:part name="parameters" element="tns:GetIPRisCheckVerify">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ExternalDispensingResponse">
+        <wsdl:part name="parameters" element="tns:ExternalDispensingResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyTTRequest">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyTT">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="WeChatPayRequest">
+        <wsdl:part name="parameters" element="tns:WeChatPay">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCureNoByXBSRequest">
+        <wsdl:part name="parameters" element="tns:GetCureNoByXBS">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetOutPatientCheckApplyFeeRequest">
+        <wsdl:part name="parameters" element="tns:GetOutPatientCheckApplyFee">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyXiangHongFault">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyXiangHongFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCDCResponse">
+        <wsdl:part name="parameters" element="tns:GetCDCResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ExternalDispensingFault">
+        <wsdl:part name="parameters" element="tns:ExternalDispensingFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="WeChatPayResponse">
+        <wsdl:part name="parameters" element="tns:WeChatPayResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateOrderStatusFault">
+        <wsdl:part name="parameters" element="tns:UpdateOrderStatusFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetCheckApplyTTFault">
+        <wsdl:part name="parameters" element="tns:GetCheckApplyTTFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="RISCheckApplyPortType" wsp:PolicyURIs="#servicePolicy">
+        <wsdl:operation name="GetOutPatientCheckApplyFee">
+            <wsdl:documentation>根据检查类型获取申请单信息（带费用）</wsdl:documentation>
+            <wsdl:input message="tns:GetOutPatientCheckApplyFeeRequest"
+                        wsaw:Action="http://tempuri.org/GetOutPatientCheckApplyFee">
+            </wsdl:input>
+            <wsdl:output message="tns:GetOutPatientCheckApplyFeeResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetOutPatientCheckApplyFeeResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetOutPatientCheckApplyFeeFault" message="tns:GetOutPatientCheckApplyFeeFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetOutPatientCheckApplyFeeFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetBloodCDC">
+            <wsdl:documentation>获取血液CDC信息</wsdl:documentation>
+            <wsdl:input message="tns:GetBloodCDCRequest" wsaw:Action="http://tempuri.org/GetBloodCDC">
+            </wsdl:input>
+            <wsdl:output message="tns:GetBloodCDCResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetBloodCDCResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetBloodCDCFault" message="tns:GetBloodCDCFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetBloodCDCFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Commercialinsurance">
+            <wsdl:documentation>商保</wsdl:documentation>
+            <wsdl:input message="tns:CommercialinsuranceRequest" wsaw:Action="http://tempuri.org/Commercialinsurance">
+            </wsdl:input>
+            <wsdl:output message="tns:CommercialinsuranceResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/CommercialinsuranceResponse">
+            </wsdl:output>
+            <wsdl:fault name="CommercialinsuranceFault" message="tns:CommercialinsuranceFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/CommercialinsuranceFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="PostBackReport">
+            <wsdl:documentation>回传报告信息</wsdl:documentation>
+            <wsdl:input message="tns:PostBackReportRequest" wsaw:Action="http://tempuri.org/PostBackReport">
+            </wsdl:input>
+            <wsdl:output message="tns:PostBackReportResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/PostBackReportResponse">
+            </wsdl:output>
+            <wsdl:fault name="PostBackReportFault" message="tns:PostBackReportFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/PostBackReportFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetWardCodeByRis">
+            <wsdl:documentation>根据病区代码获取开单信息</wsdl:documentation>
+            <wsdl:input message="tns:GetWardCodeByRisRequest" wsaw:Action="http://tempuri.org/GetWardCodeByRis">
+            </wsdl:input>
+            <wsdl:output message="tns:GetWardCodeByRisResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetWardCodeByRisResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetWardCodeByRisFault" message="tns:GetWardCodeByRisFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetWardCodeByRisFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetfirstaidCenter">
+            <wsdl:documentation>急救中心</wsdl:documentation>
+            <wsdl:input message="tns:GetfirstaidCenterRequest" wsaw:Action="http://tempuri.org/GetfirstaidCenter">
+            </wsdl:input>
+            <wsdl:output message="tns:GetfirstaidCenterResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetfirstaidCenterResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetfirstaidCenterFault" message="tns:GetfirstaidCenterFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetfirstaidCenterFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UnionPay">
+            <wsdl:documentation>银联支付</wsdl:documentation>
+            <wsdl:input message="tns:UnionPayRequest" wsaw:Action="http://tempuri.org/UnionPay">
+            </wsdl:input>
+            <wsdl:output message="tns:UnionPayResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/UnionPayResponse">
+            </wsdl:output>
+            <wsdl:fault name="UnionPayFault" message="tns:UnionPayFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/UnionPayFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getPatientInfo">
+            <wsdl:documentation>根据住院号或者治疗号获取病人信息</wsdl:documentation>
+            <wsdl:input message="tns:getPatientInfoRequest" wsaw:Action="http://tempuri.org/getPatientInfo">
+            </wsdl:input>
+            <wsdl:output message="tns:getPatientInfoResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/getPatientInfoResponse">
+            </wsdl:output>
+            <wsdl:fault name="getPatientInfoFault" message="tns:getPatientInfoFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/getPatientInfoFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetXHApplyIdByInfo">
+            <wsdl:documentation>祥红根据单据号查询申请单信息去掉预约名额</wsdl:documentation>
+            <wsdl:input message="tns:GetXHApplyIdByInfoRequest" wsaw:Action="http://tempuri.org/GetXHApplyIdByInfo">
+            </wsdl:input>
+            <wsdl:output message="tns:GetXHApplyIdByInfoResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetXHApplyIdByInfoResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetXHApplyIdByInfoFault" message="tns:GetXHApplyIdByInfoFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetXHApplyIdByInfoFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyTT">
+            <wsdl:documentation>根据检查类型获取申请单信息给图特使用</wsdl:documentation>
+            <wsdl:input message="tns:GetCheckApplyTTRequest" wsaw:Action="http://tempuri.org/GetCheckApplyTT">
+            </wsdl:input>
+            <wsdl:output message="tns:GetCheckApplyTTResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetCheckApplyTTResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyTTFault" message="tns:GetCheckApplyTTFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetCheckApplyTTFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyXiangHong">
+            <wsdl:documentation>预约中心根据查询所有状态申请单</wsdl:documentation>
+            <wsdl:input message="tns:GetCheckApplyXiangHongRequest"
+                        wsaw:Action="http://tempuri.org/GetCheckApplyXiangHong">
+            </wsdl:input>
+            <wsdl:output message="tns:GetCheckApplyXiangHongResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetCheckApplyXiangHongResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyXiangHongFault" message="tns:GetCheckApplyXiangHongFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetCheckApplyXiangHongFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="WeChatPay">
+            <wsdl:documentation>微信支付</wsdl:documentation>
+            <wsdl:input message="tns:WeChatPayRequest" wsaw:Action="http://tempuri.org/WeChatPay">
+            </wsdl:input>
+            <wsdl:output message="tns:WeChatPayResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/WeChatPayResponse">
+            </wsdl:output>
+            <wsdl:fault name="WeChatPayFault" message="tns:WeChatPayFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/WeChatPayFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCDC">
+            <wsdl:documentation>获取CDC信息</wsdl:documentation>
+            <wsdl:input message="tns:GetCDCRequest" wsaw:Action="http://tempuri.org/GetCDC">
+            </wsdl:input>
+            <wsdl:output message="tns:GetCDCResponse" wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetCDCResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetCDCFault" message="tns:GetCDCFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetCDCFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetResourcesByInfo">
+            <wsdl:documentation>获取人力资源信息</wsdl:documentation>
+            <wsdl:input message="tns:GetResourcesByInfoRequest" wsaw:Action="http://tempuri.org/GetResourcesByInfo">
+            </wsdl:input>
+            <wsdl:output message="tns:GetResourcesByInfoResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetResourcesByInfoResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetResourcesByInfoFault" message="tns:GetResourcesByInfoFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetResourcesByInfoFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderStatus">
+            <wsdl:documentation>回传更新申请单状态</wsdl:documentation>
+            <wsdl:input message="tns:UpdateOrderStatusRequest" wsaw:Action="http://tempuri.org/UpdateOrderStatus">
+            </wsdl:input>
+            <wsdl:output message="tns:UpdateOrderStatusResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/UpdateOrderStatusResponse">
+            </wsdl:output>
+            <wsdl:fault name="UpdateOrderStatusFault" message="tns:UpdateOrderStatusFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/UpdateOrderStatusFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="externalData">
+            <wsdl:documentation>外部数据</wsdl:documentation>
+            <wsdl:input message="tns:externalDataRequest" wsaw:Action="http://tempuri.org/externalData">
+            </wsdl:input>
+            <wsdl:output message="tns:externalDataResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/externalDataResponse">
+            </wsdl:output>
+            <wsdl:fault name="externalDataFault" message="tns:externalDataFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/externalDataFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyFee">
+            <wsdl:documentation>根据检查类型获取申请单信息（带费用）</wsdl:documentation>
+            <wsdl:input message="tns:GetCheckApplyFeeRequest" wsaw:Action="http://tempuri.org/GetCheckApplyFee">
+            </wsdl:input>
+            <wsdl:output message="tns:GetCheckApplyFeeResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetCheckApplyFeeResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyFeeFault" message="tns:GetCheckApplyFeeFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetCheckApplyFeeFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCureNoByXBS">
+            <wsdl:documentation>根据治疗号获取现病史</wsdl:documentation>
+            <wsdl:input message="tns:GetCureNoByXBSRequest" wsaw:Action="http://tempuri.org/GetCureNoByXBS">
+            </wsdl:input>
+            <wsdl:output message="tns:GetCureNoByXBSResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetCureNoByXBSResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetCureNoByXBSFault" message="tns:GetCureNoByXBSFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetCureNoByXBSFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetIPRisCheckVerify">
+            <wsdl:documentation>根据治疗号查询到检检查项目</wsdl:documentation>
+            <wsdl:input message="tns:GetIPRisCheckVerifyRequest" wsaw:Action="http://tempuri.org/GetIPRisCheckVerify">
+            </wsdl:input>
+            <wsdl:output message="tns:GetIPRisCheckVerifyResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/GetIPRisCheckVerifyResponse">
+            </wsdl:output>
+            <wsdl:fault name="GetIPRisCheckVerifyFault" message="tns:GetIPRisCheckVerifyFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/GetIPRisCheckVerifyFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="f5test">
+            <wsdl:input message="tns:f5testRequest" wsaw:Action="urn:f5test">
+            </wsdl:input>
+            <wsdl:output message="tns:f5testResponse"
+                         wsaw:Action="http://tempuri.org//RISCheckApplyPortType/f5testResponse">
+            </wsdl:output>
+            <wsdl:fault name="f5testFault" message="tns:f5testFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/f5testFault">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ExternalDispensing">
+            <wsdl:documentation>外部数据</wsdl:documentation>
+            <wsdl:input message="tns:ExternalDispensingRequest" wsaw:Action="http://tempuri.org/ExternalDispensing">
+            </wsdl:input>
+            <wsdl:output message="tns:ExternalDispensingResponse"
+                         wsaw:Action="http://tempuri.org/RISCheckApplySoap/ExternalDispensingResponse">
+            </wsdl:output>
+            <wsdl:fault name="ExternalDispensingFault" message="tns:ExternalDispensingFault"
+                        wsaw:Action="http://tempuri.org//RISCheckApplyPortType/ExternalDispensingFault">
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="RISCheckApplySoap11Binding" type="tns:RISCheckApplyPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsaw:UsingAddressing wsdl:required="false"/>
+        <wsdl:operation name="GetOutPatientCheckApplyFee">
+            <soap:operation soapAction="http://tempuri.org/GetOutPatientCheckApplyFee" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetOutPatientCheckApplyFeeFault">
+                <soap:fault name="GetOutPatientCheckApplyFeeFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetBloodCDC">
+            <soap:operation soapAction="http://tempuri.org/GetBloodCDC" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetBloodCDCFault">
+                <soap:fault name="GetBloodCDCFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Commercialinsurance">
+            <soap:operation soapAction="http://tempuri.org/Commercialinsurance" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="CommercialinsuranceFault">
+                <soap:fault name="CommercialinsuranceFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="PostBackReport">
+            <soap:operation soapAction="http://tempuri.org/PostBackReport" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="PostBackReportFault">
+                <soap:fault name="PostBackReportFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetWardCodeByRis">
+            <soap:operation soapAction="http://tempuri.org/GetWardCodeByRis" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetWardCodeByRisFault">
+                <soap:fault name="GetWardCodeByRisFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetfirstaidCenter">
+            <soap:operation soapAction="http://tempuri.org/GetfirstaidCenter" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetfirstaidCenterFault">
+                <soap:fault name="GetfirstaidCenterFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UnionPay">
+            <soap:operation soapAction="http://tempuri.org/UnionPay" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="UnionPayFault">
+                <soap:fault name="UnionPayFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getPatientInfo">
+            <soap:operation soapAction="http://tempuri.org/getPatientInfo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="getPatientInfoFault">
+                <soap:fault name="getPatientInfoFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetXHApplyIdByInfo">
+            <soap:operation soapAction="http://tempuri.org/GetXHApplyIdByInfo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetXHApplyIdByInfoFault">
+                <soap:fault name="GetXHApplyIdByInfoFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyTT">
+            <soap:operation soapAction="http://tempuri.org/GetCheckApplyTT" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyTTFault">
+                <soap:fault name="GetCheckApplyTTFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyXiangHong">
+            <soap:operation soapAction="http://tempuri.org/GetCheckApplyXiangHong" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyXiangHongFault">
+                <soap:fault name="GetCheckApplyXiangHongFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="WeChatPay">
+            <soap:operation soapAction="http://tempuri.org/WeChatPay" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="WeChatPayFault">
+                <soap:fault name="WeChatPayFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCDC">
+            <soap:operation soapAction="http://tempuri.org/GetCDC" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCDCFault">
+                <soap:fault name="GetCDCFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetResourcesByInfo">
+            <soap:operation soapAction="http://tempuri.org/GetResourcesByInfo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetResourcesByInfoFault">
+                <soap:fault name="GetResourcesByInfoFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderStatus">
+            <soap:operation soapAction="http://tempuri.org/UpdateOrderStatus" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="UpdateOrderStatusFault">
+                <soap:fault name="UpdateOrderStatusFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="externalData">
+            <soap:operation soapAction="http://tempuri.org/externalData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="externalDataFault">
+                <soap:fault name="externalDataFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyFee">
+            <soap:operation soapAction="http://tempuri.org/GetCheckApplyFee" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyFeeFault">
+                <soap:fault name="GetCheckApplyFeeFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCureNoByXBS">
+            <soap:operation soapAction="http://tempuri.org/GetCureNoByXBS" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCureNoByXBSFault">
+                <soap:fault name="GetCureNoByXBSFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetIPRisCheckVerify">
+            <soap:operation soapAction="http://tempuri.org/GetIPRisCheckVerify" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetIPRisCheckVerifyFault">
+                <soap:fault name="GetIPRisCheckVerifyFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="f5test">
+            <soap:operation soapAction="urn:f5test" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="f5testFault">
+                <soap:fault name="f5testFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ExternalDispensing">
+            <soap:operation soapAction="http://tempuri.org/ExternalDispensing" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ExternalDispensingFault">
+                <soap:fault name="ExternalDispensingFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="RISCheckApplySoap12Binding" type="tns:RISCheckApplyPortType">
+        <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsaw:UsingAddressing wsdl:required="false"/>
+        <wsdl:operation name="GetOutPatientCheckApplyFee">
+            <soap12:operation soapAction="http://tempuri.org/GetOutPatientCheckApplyFee" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetOutPatientCheckApplyFeeFault">
+                <soap12:fault name="GetOutPatientCheckApplyFeeFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetBloodCDC">
+            <soap12:operation soapAction="http://tempuri.org/GetBloodCDC" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetBloodCDCFault">
+                <soap12:fault name="GetBloodCDCFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Commercialinsurance">
+            <soap12:operation soapAction="http://tempuri.org/Commercialinsurance" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="CommercialinsuranceFault">
+                <soap12:fault name="CommercialinsuranceFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="PostBackReport">
+            <soap12:operation soapAction="http://tempuri.org/PostBackReport" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="PostBackReportFault">
+                <soap12:fault name="PostBackReportFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetWardCodeByRis">
+            <soap12:operation soapAction="http://tempuri.org/GetWardCodeByRis" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetWardCodeByRisFault">
+                <soap12:fault name="GetWardCodeByRisFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetfirstaidCenter">
+            <soap12:operation soapAction="http://tempuri.org/GetfirstaidCenter" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetfirstaidCenterFault">
+                <soap12:fault name="GetfirstaidCenterFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UnionPay">
+            <soap12:operation soapAction="http://tempuri.org/UnionPay" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="UnionPayFault">
+                <soap12:fault name="UnionPayFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getPatientInfo">
+            <soap12:operation soapAction="http://tempuri.org/getPatientInfo" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="getPatientInfoFault">
+                <soap12:fault name="getPatientInfoFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetXHApplyIdByInfo">
+            <soap12:operation soapAction="http://tempuri.org/GetXHApplyIdByInfo" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetXHApplyIdByInfoFault">
+                <soap12:fault name="GetXHApplyIdByInfoFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyTT">
+            <soap12:operation soapAction="http://tempuri.org/GetCheckApplyTT" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyTTFault">
+                <soap12:fault name="GetCheckApplyTTFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyXiangHong">
+            <soap12:operation soapAction="http://tempuri.org/GetCheckApplyXiangHong" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyXiangHongFault">
+                <soap12:fault name="GetCheckApplyXiangHongFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="WeChatPay">
+            <soap12:operation soapAction="http://tempuri.org/WeChatPay" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="WeChatPayFault">
+                <soap12:fault name="WeChatPayFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCDC">
+            <soap12:operation soapAction="http://tempuri.org/GetCDC" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCDCFault">
+                <soap12:fault name="GetCDCFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetResourcesByInfo">
+            <soap12:operation soapAction="http://tempuri.org/GetResourcesByInfo" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetResourcesByInfoFault">
+                <soap12:fault name="GetResourcesByInfoFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateOrderStatus">
+            <soap12:operation soapAction="http://tempuri.org/UpdateOrderStatus" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="UpdateOrderStatusFault">
+                <soap12:fault name="UpdateOrderStatusFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="externalData">
+            <soap12:operation soapAction="http://tempuri.org/externalData" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="externalDataFault">
+                <soap12:fault name="externalDataFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCheckApplyFee">
+            <soap12:operation soapAction="http://tempuri.org/GetCheckApplyFee" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCheckApplyFeeFault">
+                <soap12:fault name="GetCheckApplyFeeFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetCureNoByXBS">
+            <soap12:operation soapAction="http://tempuri.org/GetCureNoByXBS" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetCureNoByXBSFault">
+                <soap12:fault name="GetCureNoByXBSFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetIPRisCheckVerify">
+            <soap12:operation soapAction="http://tempuri.org/GetIPRisCheckVerify" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetIPRisCheckVerifyFault">
+                <soap12:fault name="GetIPRisCheckVerifyFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="f5test">
+            <soap12:operation soapAction="urn:f5test" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="f5testFault">
+                <soap12:fault name="f5testFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ExternalDispensing">
+            <soap12:operation soapAction="http://tempuri.org/ExternalDispensing" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ExternalDispensingFault">
+                <soap12:fault name="ExternalDispensingFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="RISCheckApply">
+        <wsdl:port name="RISCheckApplyHttpSoap12Endpoint" binding="tns:RISCheckApplySoap12Binding">
+            <soap12:address
+                    location="http://128.0.16.191:18030/services/RISCheckApply.RISCheckApplyHttpSoap12Endpoint"/>
+        </wsdl:port>
+        <wsdl:port name="RISCheckApplyHttpSoap11Endpoint" binding="tns:RISCheckApplySoap11Binding">
+            <soap:address location="http://128.0.16.191:18030/services/RISCheckApply.RISCheckApplyHttpSoap11Endpoint"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsp:Policy wsu:Id="servicePolicy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <wsam:Addressing wsp:Optional="true" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+                    <wsp:Policy>
+                        <wsam:AnonymousResponses/>
+                    </wsp:Policy>
+                </wsam:Addressing>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</wsdl:definitions>

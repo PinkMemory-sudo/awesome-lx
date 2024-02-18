@@ -1,5 +1,7 @@
 package webservice;
 
+import lombok.extern.slf4j.Slf4j;
+
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
@@ -13,12 +15,13 @@ import javax.xml.ws.Endpoint;
  * 使用@WebService注解标注实现类
  */
 
-
-@WebService(targetNamespace ="web" )
+@Slf4j
+@WebService(targetNamespace = "http://tempuri.org/")
 public class HelloWorldServiceTest {
 
     @WebMethod
-    public String sayHello(@WebParam(name = "name")  String name) {
+    public String sayHello(@WebParam(name = "user") String name) {
+        log.info("name:{}",name);
         return "Hello, " + name + "!";
     }
 
