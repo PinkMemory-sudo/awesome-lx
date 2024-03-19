@@ -1,10 +1,10 @@
 
-#spring:
-#  datasource:
-#    driverClassName: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://192.168.1.20:3306/zhongyi_yjfz?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL
-#    username: admin
-#    password: Admin@123
+mode:
+  type: Standalone
+  repository:
+    type: JDBC
+    props:
+      path: demo
 
 dataSources:
   ds_0:
@@ -21,7 +21,7 @@ dataSources:
     password:
 
 rules:
-- !SHARDING
+  - !SHARDING
     tables:
       order:
         actualDataNodes: ds${0..1}.t_order_${0..1}
@@ -75,11 +75,9 @@ rules:
       sharding_key_required_auditor:
         type: DML_SHARDING_CONDITIONS
 
-- !BROADCAST
+  - !BROADCAST
     tables: # Broadcast tables
       - t_address
 
 props:
   sql-show: false
-
-
