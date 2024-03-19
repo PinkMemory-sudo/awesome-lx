@@ -16,7 +16,7 @@ public class RunningState implements OrderExecState {
 
     @Override
     public void preconditionCheck() {
-        System.out.println("未开始执行/已暂停/取消完成");
+        System.out.println("已完成");
     }
 
     @Override

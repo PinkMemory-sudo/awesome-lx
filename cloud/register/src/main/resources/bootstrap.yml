@@ -28,8 +28,12 @@ spring:
         server-addr: 192.168.1.138:85
         namespace: b0919edd-a86a-408e-b3e1-c916b904d739
         file-extension: yml
-        group: pk
+        group: pretend
         shared-configs:
           - data-id: common.yml
-            group: pk
+            group: pretend
             refresh: true
+      discovery:
+        group: pretend
+        server-addr: 192.168.1.138:85
+        namespace: b0919edd-a86a-408e-b3e1-c916b904d739

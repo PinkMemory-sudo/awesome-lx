@@ -1,0 +1,64 @@
+rules:
+  - !SHARDING
+    tables: # Sharding table configuration
+      <logic_table_name> (+): # Logic table name
+        actualDataNodes (?): # Describe data source names and actual tables (refer to Inline syntax rules)
+        databaseStrategy (?): # Databases sharding strategy, use default databases sharding strategy if absent. sharding strategy below can choose only one.
+          standard: # For single sharding column scenario
+            shardingColumn: # Sharding column name
+            shardingAlgorithmName: # Sharding algorithm name
+          complex: # For multiple sharding columns scenario
+            shardingColumns: # Sharding column names, multiple columns separated with comma
+            shardingAlgorithmName: # Sharding algorithm name
+          hint: # Sharding by hint
+            shardingAlgorithmName: # Sharding algorithm name
+          none: # Do not sharding
+        tableStrategy: # Tables sharding strategy, same as database sharding strategy
+        keyGenerateStrategy: # Key generator strategy
+          column: # Column name of key generator
+          keyGeneratorName: # Key generator name
+        auditStrategy: # Sharding audit strategy
+          auditorNames: # Sharding auditor name
+            - <auditor_name>
+            - <auditor_name>
+          allowHintDisable: true # Enable or disable sharding audit hint
+    autoTables: # Auto Sharding table configuration
+      t_order_auto: # Logic table name
+        actualDataSources (?): # Data source names
+        shardingStrategy: # Sharding strategy
+          standard: # For single sharding column scenario
+            shardingColumn: # Sharding column name
+            shardingAlgorithmName: # Auto sharding algorithm name
+    bindingTables (+): # Binding tables
+      - <logic_table_name_1, logic_table_name_2, ...>
+      - <logic_table_name_1, logic_table_name_2, ...>
+    defaultDatabaseStrategy: # Default strategy for database sharding
+    defaultTableStrategy: # Default strategy for table sharding
+    defaultKeyGenerateStrategy: # Default Key generator strategy
+    defaultShardingColumn: # Default sharding column name
+
+    # Sharding algorithm configuration
+    shardingAlgorithms:
+      <sharding_algorithm_name> (+): # Sharding algorithm name
+        type: # Sharding algorithm type
+        props: # Sharding algorithm properties
+        # ...
+
+    # Key generate algorithm configuration
+    keyGenerators:
+      <key_generate_algorithm_name> (+): # Key generate algorithm name
+        type: # Key generate algorithm type
+        props: # Key generate algorithm properties
+        # ...
+
+    # Sharding audit algorithm configuration
+    auditors:
+      <sharding_audit_algorithm_name> (+): # Sharding audit algorithm name
+        type: # Sharding audit algorithm type
+        props: # Sharding audit algorithm properties
+        # ...
+
+  - !BROADCAST
+    tables: # Broadcast tables
+      - <table_name>
+      - <table_name>

@@ -2,6 +2,7 @@ package juc;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.stream.Collectors;
@@ -48,7 +49,7 @@ public class CompletableFutureTest {
         // 等待所有任务完成/任意一个
         CompletableFuture<String> future5 = CompletableFuture.supplyAsync(() -> {
             try {
-                TimeUnit.SECONDS.sleep(1);
+                TimeUnit.SECONDS.sleep(10);
                 System.out.println("Task 1");
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -64,10 +65,50 @@ public class CompletableFutureTest {
             return "Task 3";
         });
 
+//        CompletableFuture.anyOf()
+        // 组合成一个
         CompletableFuture<Void> allOf = CompletableFuture.allOf(future5, future4, future3);
+        System.out.println("j");
+        // 等待组合成的Future完成
         allOf.join();
+        System.out.println("oin");
+        System.out.println(future3.join());
+        log.info("{}.{}.{}", future5.join(), future4.join(), future3.join());
         System.out.println("All tasks completed");
+        System.out.println(CompletableFuture.completedFuture("speed").join());
+        // 获得计算值，get(),get(timeout),getNow,join
+        // complete(T value)  没完成时给个默认值
 
+        // 将结果传给另一个future执行,与前一个future使用同一个线程
+        System.out.println(CompletableFuture.supplyAsync(() -> "123").thenApply(it -> it + "ml").join());
+        //
+        System.out.println(CompletableFuture.supplyAsync(() -> "123").thenApplyAsync(it -> it + "ml").join());
+
+        CompletableFuture.supplyAsync(() -> "123").thenAccept(it -> {
+            System.out.println("hahah" + it);
+        });
+        // 用两个future的计算结果进行计算
+        CompletableFuture<List<Integer>> future123 = CompletableFuture.supplyAsync(() -> Stream.of(1, 2, 3).collect(Collectors.toList()));
+        CompletableFuture<List<Integer>> future456 = CompletableFuture.supplyAsync(() -> Stream.of(4, 5, 6).collect(Collectors.toList()));
+        future123.thenAcceptBoth(future456, (r1, r2) -> {
+            r1.addAll(r2);
+            r1.sort(Comparator.comparingInt(Integer::intValue).reversed());
+            System.out.println(r1);
+        });
+        // 计算完成后执行的操作，不要计算结果  thenRun
+
+        // 合并两个计算结果
+        CompletableFuture<List<Integer>> future789 = CompletableFuture.supplyAsync(() -> Stream.of(7,8,9).collect(Collectors.toList()));
+        CompletableFuture<List<Integer>> combine = future123.thenCombine(future456, (r1, r2) -> {
+            r1.addAll(r2);
+            return r1;
+        }).thenCombine(future789, (r1, r2) -> {
+            r1.addAll(r2);
+            return r1;
+        });
+        System.out.println(combine.join());
 
     }
+
 }
+
