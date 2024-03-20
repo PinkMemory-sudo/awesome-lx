@@ -17,6 +17,7 @@
 
 package org.apache.shardingsphere.example.sharding.spring.boot.starter.mybatis.repository;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.shardingsphere.example.sharding.spring.boot.starter.mybatis.entity.Order;
 
 import java.util.List;

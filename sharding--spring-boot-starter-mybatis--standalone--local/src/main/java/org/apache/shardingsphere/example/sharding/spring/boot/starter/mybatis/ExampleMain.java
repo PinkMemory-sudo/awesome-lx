@@ -17,12 +17,10 @@
 
 package org.apache.shardingsphere.example.sharding.spring.boot.starter.mybatis;
 
-import org.apache.shardingsphere.example.sharding.spring.boot.starter.mybatis.service.ExampleService;
-
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
+
 import java.sql.SQLException;
 
 @MapperScan("org.apache.shardingsphere.example.sharding.spring.boot.starter.mybatis.repository")
@@ -30,9 +28,6 @@ import java.sql.SQLException;
 public class ExampleMain {
     
     public static void main(final String[] args) throws SQLException {
-        try (ConfigurableApplicationContext applicationContext = SpringApplication.run(ExampleMain.class, args)) {
-            ExampleService exampleService = applicationContext.getBean(ExampleService.class);
-            exampleService.run();
-        }
+        SpringApplication.run(ExampleMain.class, args);
     }
 }

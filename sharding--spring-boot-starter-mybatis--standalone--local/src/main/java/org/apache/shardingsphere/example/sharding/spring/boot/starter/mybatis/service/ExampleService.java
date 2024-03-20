@@ -57,7 +57,7 @@ public final class ExampleService {
         }
     }
     
-    private void initEnvironment() throws SQLException {
+    public void initEnvironment() throws SQLException {
         orderRepository.createTableIfNotExists();
         orderItemRepository.createTableIfNotExists();
         addressRepository.createTableIfNotExists();
@@ -75,7 +75,7 @@ public final class ExampleService {
         LOGGER.info("-------------- Process Success Finish --------------");
     }
     
-    private List<Long> insertData() throws SQLException {
+    public List<Long> insertData() throws SQLException {
         LOGGER.info("---------------------------- Insert Data ----------------------------");
         List<Long> result = new ArrayList<>(10);
         for (int i = 1; i <= 10; i++) {
