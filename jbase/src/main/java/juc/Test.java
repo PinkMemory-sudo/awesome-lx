@@ -7,6 +7,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Test {
     public static void main(String[] args) {
+        for (int i = 0; i <args.length ; i++) {
+
+        }
         long begin = System.currentTimeMillis();
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         CompletableFuture<Void> task1 = CompletableFuture.runAsync(() -> {
@@ -37,4 +40,5 @@ public class Test {
         long end = System.currentTimeMillis();
         System.out.println(end-begin);
     }
+
 }
