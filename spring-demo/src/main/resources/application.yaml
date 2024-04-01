@@ -8,6 +8,17 @@
 
 
 spring:
-  datasource:
-    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
-    url: jdbc:shardingsphere:classpath:config.yaml
+#  datasource:
+#    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+#    url: jdbc:shardingsphere:classpath:config.yaml
+  redis:
+    port: 6379
+    host: 192.168.1.20
+    database: 4
+    password: ''
+  redisson:
+    config:
+      singleServerConfig:
+        address: redis://192.168.1.20:6379
+        database: 2
+        password: ''

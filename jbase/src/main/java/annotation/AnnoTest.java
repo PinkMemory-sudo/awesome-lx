@@ -14,7 +14,7 @@ public class AnnoTest {
         Class cls = AnnoTest.class;
         Annotation[] annotations = cls.getAnnotations();
         Annotation[] declaredAnnotations = cls.getDeclaredAnnotations();
-//        Data annotation = cls.getAnnotation(Data.class);
+//        PatData annotation = cls.getAnnotation(PatData.class);
 //        boolean present = cls.isAnnotationPresent(Slf4j.class);
         log.info("annotations:{}", Arrays.toString(annotations));
         log.info("declaredAnnotations:{}",Arrays.toString(declaredAnnotations));
