@@ -1,16 +1,13 @@
 package juc;
 
-import cn.hutool.crypto.digest.DigestUtil;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.concurrent.CompletableFuture;
 
 /**
  * 1. 异步执行
  */
 @Slf4j
 public class CompletableFutureTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // 1. 异步执行
 //        ExecutorService executorService = Executors.newFixedThreadPool(3);
 //        CompletableFuture.runAsync(() -> System.out.println(Thread.currentThread().getName()));
@@ -36,12 +33,12 @@ public class CompletableFutureTest {
 //
 //
 //        // 3. 异常处理
-        CompletableFuture.runAsync(() -> {
-            throw new RuntimeException("错误");
-        }).exceptionally(ex -> {
-            System.out.println(ex.getMessage());
-            return null;
-        });
+//        CompletableFuture.runAsync(() -> {
+//            throw new RuntimeException("错误");
+//        }).exceptionally(ex -> {
+//            System.out.println(ex.getMessage());
+//            return null;
+//        });
 //
 //        // 等待所有任务完成/任意一个
 //        CompletableFuture<String> future5 = CompletableFuture.supplyAsync(() -> {
@@ -115,7 +112,17 @@ public class CompletableFutureTest {
 //            throw new RuntimeException(e);
 //        }
 
-        System.out.println(DigestUtil.md5Hex("1922年12月初，宋子文在上海莫利哀路孙中山寓所举办社区基督教晚会，蒋、宋美龄都参加，二人首次谋面"));
+//        System.out.println(DigestUtil.md5Hex("1922年12月初，宋子文在上海莫利哀路孙中山寓所举办社区基督教晚会，蒋、宋美龄都参加，二人首次谋面"));
+
+//        Executors.newFixedThreadPool(1).submit(() -> {
+//            try {
+//            log.info(Thread.currentThread().getName());
+                throw new RuntimeException("haha");
+//            } catch (RuntimeException e) {
+//                log.error("error", e);
+//            }
+//        });
+//        TimeUnit.SECONDS.sleep(10);
 
     }
 
