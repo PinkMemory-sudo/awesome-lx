@@ -16,9 +16,3 @@ spring:
     host: 192.168.1.20
     database: 4
     password: ''
-  redisson:
-    config:
-      singleServerConfig:
-        address: redis://192.168.1.20:6379
-        database: 2
-        password: ''
