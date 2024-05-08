@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class Temp {
     public static void main(String[] args) {
 //        BigDecimal m = new BigDecimal("0.146").multiply(new BigDecimal("0")).subtract(new BigDecimal("3.517"));
@@ -16,9 +14,9 @@ public class Temp {
 //        patData.setName("Tom");
 //        System.out.println(ReflectUtil.getFieldValue(patData, "name"));
 
-//        System.out.println(1.66*1.66*24.9);
-//        System.out.println(1.66*1.66*21.5);
-
-        System.out.println(LocalDate.now().plusDays(100));
+        System.out.println(1.66 * 1.66 * 24.9);
+        System.out.println(72.65 - 1.66 * 1.66 * 24.9);
+        System.out.println(1.66 * 1.66 * 22.9);
+        System.out.println(72.65 - 1.66 * 1.66 * 22.9);
     }
 }
