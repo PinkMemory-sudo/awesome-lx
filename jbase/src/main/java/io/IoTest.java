@@ -10,7 +10,7 @@ public class IoTest {
 
 
     public static void main(String[] args) throws IOException {
-
+        System.out.println("asd"+null);
     }
 
     public static void readGzFile(String gzFile) throws IOException {
