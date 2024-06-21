@@ -23,10 +23,10 @@ public class ConfigApi implements ApplicationContextAware {
 
     private final OrderProperties orderProperties;
 
-    @Value("${isAttach}")
+    @Value("${isAttach:tom}")
     private String name;
 
-    @Value("${age}")
+    @Value("${age:18}")
     private String age;
 
     @GetMapping("/name")

@@ -29,13 +29,13 @@ public class Temp {
 //        patData.setName("Tom");
 //        System.out.println(ReflectUtil.getFieldValue(patData, "name"));
 
-        String cronStr="0 30 17 * * ? ";
+        String cronStr = "0 30 17 * * ? ";
         CronDefinition cronDefinition = CronDefinitionBuilder.instanceDefinitionFor(CronType.QUARTZ);
         CronParser parser = new CronParser(cronDefinition);
         Cron cron = parser.parse(cronStr);
         cron.validate();
 
-        ZonedDateTime now = ZonedDateTime.of(LocalDateTime.of(LocalDate.now(), LocalTime.of(17,31,0)), ZoneId.systemDefault());
+        ZonedDateTime now = ZonedDateTime.of(LocalDateTime.of(LocalDate.now(), LocalTime.of(17, 31, 0)), ZoneId.systemDefault());
         ExecutionTime executionTime = ExecutionTime.forCron(cron);
         Optional<ZonedDateTime> nextExecution = executionTime.nextExecution(now);
         Optional<ZonedDateTime> lastExecution = executionTime.lastExecution(now);
@@ -50,5 +50,6 @@ public class Temp {
         } else {
             System.out.println("No next execution time found.");
         }
+        System.out.println("2024-06-17 11:06:04.000".substring(0, 19));
     }
 }
