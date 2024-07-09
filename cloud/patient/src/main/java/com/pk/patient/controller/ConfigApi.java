@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class ConfigApi {
 
-    @Value("${name}")
+    @Value("${name:tom}")
     private String name;
 
     @GetMapping("/name")

@@ -1,25 +1,24 @@
 server:
   port: 8001
 spring:
-  profiles:
-    active: dev
+#  profiles:
+#    active: dev
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.1.9:3306/test_cgl?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL
+    url: jdbc:mysql://127.0.0.1:3306/db0?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL
     username: root
-    password: Pass@word!1
+    password: 111111
   application:
     name: patient
   cloud:
     nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
       config:
-        server-addr: 192.168.1.138:85
-        namespace: b0919edd-a86a-408e-b3e1-c916b904d739
+        server-addr: 127.0.0.1:8848
         file-extension: yml
-        group: pk
         shared-configs:
           - data-id: common.yml
-            group: pk
             refresh: true
 
 mybatis-plus:

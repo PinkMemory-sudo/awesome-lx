@@ -70,8 +70,8 @@ public final class ExampleService {
         LOGGER.info("-------------- Process Success Begin ---------------");
         List<Long> orderIds = insertData();
         printData(); 
-        deleteData(orderIds);
-        printData();
+//        deleteData(orderIds);
+//        printData();
         LOGGER.info("-------------- Process Success Finish --------------");
     }
     
