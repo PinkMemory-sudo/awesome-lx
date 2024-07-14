@@ -6,16 +6,16 @@ spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/db0?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL
-    username: root
+    username:
     password: 111111
   application:
     name: patient
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.1.151:6636
       config:
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.1.151:6636
         file-extension: yml
         shared-configs:
           - data-id: common.yml
