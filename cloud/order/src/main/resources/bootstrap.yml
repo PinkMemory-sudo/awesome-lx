@@ -6,10 +6,38 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 172.26.65.21:8848
       config:
-        server-addr: 127.0.0.1:8848
+        server-addr: 172.26.65.21:8848
         file-extension: yml
         shared-configs:
           - data-id: common.yml
             refresh: true
+
+meta:
+  seata:
+    nacos:
+      server-addr: 172.26.65.21:8848
+      namespace: 34133419-4645-48c0-8b1b-7b4762067fe7
+      group: SEATA_GROUP
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  # 事务分组, 后面细讲
+  tx-service-group: default_tx_group
+  registry:
+    type: nacos
+    nacos:
+      # 应与seata-server实际注册的服务名一致
+      application: seata-server
+      server-addr: ${meta.seata.nacos.server-addr}
+      namespace: ${meta.seata.nacos.namespace}
+      group: ${meta.seata.nacos.group}
+  config:
+    type: nacos
+    nacos:
+      server-addr: ${meta.seata.nacos.server-addr}
+      namespace: ${meta.seata.nacos.namespace}
+      group: ${meta.seata.nacos.group}
+      data-id: seata.properties
