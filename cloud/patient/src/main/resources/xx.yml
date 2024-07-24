@@ -1,24 +1,3 @@
-spring:
-  application:
-    name: seata-server
-
-console:
-  user:
-    username: seata
-    password: seata
-
-seata:
-  security:
-    secretKey: SeataSecretKey0c382ef121d778043159209298fd40bf3850a017
-    tokenValidityInMilliseconds: 1800000
-    ignore:
-      urls: /,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/api/v1/auth/login
-
-logging:
-  config: classpath:logback-spring.xml
-  file:
-    path: ${user.home}/logs/seata
-
 server:
   port: 7091
   undo:
@@ -69,10 +48,10 @@ transport:
   compressor: none
 
 service:
-  vgroupMapping:
-    default_tx_group: default
-  enableDegrade: false
-  disableGlobalTransaction: false
+ vgroupMapping:
+   default_tx_group: default
+ enableDegrade: false
+ disableGlobalTransaction: false
 
 client:
   rm:

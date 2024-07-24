@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @SpringBootApplication
 @Slf4j
-@MapperScan("com.pk.patient.dao.mapper")
+@MapperScan("com.pk.patient.mapper")
 public class PatientApplication {
 
     public static void main(String[] args) {
