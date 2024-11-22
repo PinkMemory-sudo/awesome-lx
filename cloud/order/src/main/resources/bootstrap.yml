@@ -1,18 +1,9 @@
 server:
   port: 9001
 spring:
+  profiles:
+    include: common
   application:
     name: order
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 192.168.1.151:6636
-        namespace: af8bb2c9-c338-418b-86a5-fe4918a34edd
-      config:
-        server-addr: 192.168.1.151:6636
-        file-extension: yml
-        namespace: af8bb2c9-c338-418b-86a5-fe4918a34edd
-#        shared-configs:
-#          - data-id: common.yml
-#            refresh: true
+
 

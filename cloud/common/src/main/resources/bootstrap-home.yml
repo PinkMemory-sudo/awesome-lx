@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 84d380a1-724d-451f-9c15-cb613c270e89
+        shared-configs:
+          - data-id: awesome-common.yml
