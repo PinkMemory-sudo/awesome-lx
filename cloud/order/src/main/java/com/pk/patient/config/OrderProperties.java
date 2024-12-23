@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Data
 @Configuration
-@ConfigurationProperties
+@ConfigurationProperties()
 public class OrderProperties {
     private String isAttach;
     private String age;
