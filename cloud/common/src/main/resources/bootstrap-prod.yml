@@ -1,0 +1,17 @@
+#Nacos配置中心的相关配置
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 162.20.169.50:8848
+        file-extension: yml
+        namespace: 15049704-9e64-46b3-8e49-e6d4cc97fb59
+        refresh-enabled: true
+
+        #公用配置文件
+        shared-configs:
+          - data-id: dandelion-common.yml
+            #是否支持自动刷新
+            refresh: true
+
+

@@ -1,3 +1,12 @@
+#Nacos配置中心的相关配置
 spring:
+  sleuth:
+    sampler:
+      probability: 1.0
   profiles:
-    active: home
+    active: dev
+#
+#logging:
+#  pattern:
+#    springCloud: "%X{X-B3-TraceId} - %m%n"
+#    level: "%5p [${PID}] %t %c{1} - %m%n"

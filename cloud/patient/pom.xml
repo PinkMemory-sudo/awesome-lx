@@ -7,40 +7,44 @@
         <version>2023</version>
     </parent>
     <artifactId>patient</artifactId>
-    <name> patient</name>
+    <name>patient</name>
     <dependencies>
         <dependency>
             <groupId>org.pk.lx</groupId>
             <artifactId>pk-common</artifactId>
             <version>2023</version>
         </dependency>
-        <!--数据库连接驱动-->
-<!--        <dependency>-->
-<!--            <groupId>mysql</groupId>-->
-<!--            <artifactId>mysql-connector-java</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.baomidou</groupId>-->
-<!--            <artifactId>mybatis-plus-boot-starter</artifactId>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; 此版本和seata服务端保持一致 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>io.seata</groupId>-->
-<!--            <artifactId>seata-spring-boot-starter</artifactId>-->
-<!--            <version>1.6.1</version>-->
-<!--        </dependency>-->
 
-<!--        &lt;!&ndash; 和Spring-Cloud-Alibaba版本保持一致即可 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>-->
-<!--            <version>2.2.0.RELEASE</version>-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>io.seata</groupId>-->
-<!--                    <artifactId>seata-spring-boot-starter</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
+        <!-- 和Spring-Cloud-Alibaba版本保持一致即可 -->
     </dependencies>
+    <build>
+        <finalName>patient</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.7.RELEASE</version>
+                <configuration>
+                    <mainClass>com.pk.patient.PatientApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

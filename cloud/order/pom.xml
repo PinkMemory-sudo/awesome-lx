@@ -15,7 +15,14 @@
         <version>2023</version>
     </dependency>
 
-<!--    <dependency>-->
+    <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcprov-jdk15on</artifactId>
+        <version>1.70</version>
+    </dependency>
+
+
+    <!--    <dependency>-->
 <!--        <groupId>com.alibaba.nacos</groupId>-->
 <!--        <artifactId>nacos-client</artifactId>-->
 <!--        <version>1.3.2</version> &lt;!&ndash; 确保版本与 Nacos 服务器匹配 &ndash;&gt;-->

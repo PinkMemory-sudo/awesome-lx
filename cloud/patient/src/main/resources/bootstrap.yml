@@ -1,10 +1,5 @@
-server:
-  port: 8001
 spring:
   profiles:
     include: common
   application:
     name: patient
-
-
-

@@ -1,0 +1,43 @@
+
+server:
+  port: 9981
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.135:3306/eicu_fy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL&rewriteBatchedStatements=true
+    username: canal
+    password: canal
+  #  datasource:
+  #    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+  #    url: jdbc:shardingsphere:classpath:config.yaml
+  redis:
+    port: 6379
+    host: 192.168.1.20
+    database: 13
+
+  #xxl:
+  #  job:
+  #    admin:
+  #      addresses: http://127.0.0.1:8080/xxl-job-admin  # 调度中心部署根地址
+  #    accessToken: "default_token"  # 执行器通讯TOKEN
+  #    executor:
+  #      appname: order  # 执行器AppName
+  #      address: ""  # 执行器注册地址
+  #      ip: ""  # 执行器IP
+  #      port: 8888  # 执行器端口号
+  #      logpath: /data/applogs/xxl-job/jobhandler  # 执行器运行日志文件存储路径
+  #      logretentiondays: 30  # 执行器日志文件保存天数
+
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org:
+        quartz:
+          jobStore:
+            isClustered: true
+            clusterCheckinInterval: 20000
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+          scheduler:
+            instanceId: AUTO
+

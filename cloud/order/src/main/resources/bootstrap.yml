@@ -1,9 +1,6 @@
-server:
-  port: 9001
 spring:
   profiles:
     include: common
   application:
     name: order
-
 
